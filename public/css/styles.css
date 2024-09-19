@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: repeating-linear-gradient(151deg, rgba(0,0,0,0.04),rgba(0,0,0,0.08),rgba(0,0,0,0.05),rgba(0,0,0,0.04),rgba(0,0,0,0.01),rgba(0,0,0,0.1),rgba(0,0,0,0.09),rgba(0,0,0,0.1),rgba(0,0,0,0.03),transparent,rgba(0,0,0,0.07),rgba(0,0,0,0.03),rgba(0,0,0,0.06) 4px),linear-gradient(196deg, rgb(193, 255, 253),rgba(59,104,247, 0.74));
+}
+
+.container {
+    width: 690px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.wrapper {
+    border-radius: 3px;
+    border: 1px solid #bbb;
+}
+
+.wrapper .text-input {
+    display: flex;
+    border-bottom: 1px solid #bbb;
+}
+
+.text-input .to-text {
+    border-radius: 0px;
+    border-left: 1px solid #bbb;
+}
+
+.text-input textarea {
+    height: 250px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 10px 13px;
+}
+
+.controls {
+    list-style: none;
+    padding: 10px 13px;
+}
+
+.controls, li, .icons, .icons i {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls .from .icons {
+    padding-right: 15px;
+    border-right: 1px solid #bbb;
+}
+
+.controls .to .icons {
+    padding-left: 15px;
+    border-left: 1px solid #bbb;
+}
+
+.controls .from .language {
+    padding-right: 30px;
+}
+
+.controls .icons {
+    width: 38%;
+}
+
+.controls .icons i {
+    width: 50px;
+    color: rgba(67, 64, 64, 0.693);
+    font-size: 14px;
+    cursor: pointer;
+    justify-content: space-evenly;
+    transition: transform 1s ease-in-out, color 0.3s ease;
+}
+
+.controls .row select {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+}
+
+.controls .exchange {
+    color: rgba(67, 64, 64, 0.693);
+    font-size: 16px;
+    cursor: pointer;
+    padding-right: 50px;
+    transition: transform 1s ease-in-out, color 0.3s ease;
+}
+
+.container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 6px;
+    background: #5268f7;
+    color: #fff;
+    font-size: 14px;
+}
+
+.controls .icons i:hover {
+    transform: scale(1.2);
+}
+.controls .exchange:hover {
+    transform: scale(1.3);
+}
+/* Fix: Ensure clicked state takes precedence */
+.clicked {
+    color: rgb(0, 0, 0) !important;
+}
+
+
+/* Pulsating animation for the microphone icon when listening */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+.listening {
+    animation: pulse 1s infinite; /* Apply pulsating effect */
+    color: red; /* Change the color to indicate recording */
+}
