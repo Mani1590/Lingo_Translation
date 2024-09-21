@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 import mongoose from "mongoose";
 import { connectDB, Login } from "./mongoose.js"; // Importing the Mongoose connection and model
 import dotenv from "dotenv";
-import bcrypt from "bcrypt"; // Import bcrypt for hashing passwords
+import bcrypt from "bcryptjs"; // Import bcrypt for hashing passwords
 
 dotenv.config();
 const __dirname = dirname(fileURLToPath(import.meta.url));
