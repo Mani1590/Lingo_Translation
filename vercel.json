@@ -1,23 +1,16 @@
 {
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
       "destination": "https://lingo-translation.onrender.com/api/$1"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/login",
-      "dest": "/templates/login.html"
     },
     {
-      "src": "/signup",
-      "dest": "/templates/signup.html"
+      "source": "/login",
+      "destination": "/templates/login.html"
+    },
+    {
+      "source": "/signup",
+      "destination": "/templates/signup.html"
     }
   ]
 }
