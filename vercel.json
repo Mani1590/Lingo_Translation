@@ -5,4 +5,14 @@
       "destination": "https://lingo-translation.onrender.com/api/$1"
     }
   ]
+  "routes": [
+    {
+      "src": "/login",
+      "dest": "/templates/login.html"
+    },
+    {
+      "src": "/signup",
+      "dest": "/templates/signup.html"
+    }
+  ]
 }
