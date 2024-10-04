@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://lingo-translation.onrender.com/api/$1"
+    }
+  ]
+}
